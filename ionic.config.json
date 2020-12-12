@@ -1,0 +1,8 @@
+{
+  "name": "ubs_manager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "bbf27a01"
+}
