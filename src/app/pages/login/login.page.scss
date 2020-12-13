@@ -1,0 +1,54 @@
+.logo{
+    width: 275px;
+    height: 98.84px;
+    margin: 110px auto;
+    display: block;
+    };
+    
+    
+    .input-theme{
+      height: 52px;
+      margin: 14px auto;
+      width: 80%;
+      color: white;
+    --background: #0974d1;
+    }
+    .input-button{
+      height: 52px;
+      margin: 14px auto;
+      width: 80%;
+      text-align: center;
+    --background: #0974d1;
+    color: whitesmoke;
+    font-weight: 600
+    };
+    
+    a#cadastrar{
+      /* Cadastre-se */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    display: block;
+    align-items: center;
+    text-align: center;
+    
+    color: white;
+    }
+    
+    a#senha{
+      /*Esqueceu senha*/
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      /* identical to box height */
+      display: block;
+      align-items: center;
+      text-align: center;
+    
+      color: white;
+    }

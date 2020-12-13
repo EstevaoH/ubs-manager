@@ -1,0 +1,198 @@
+<ion-header class="header-theme">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="defaultHref" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header-title">Cadastro</ion-title>
+    <!-- <img src="../../../assets/logo-relp-white 2.svg" width="120px"
+      class="header-logo-title"> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="app">
+  <form [formGroup]="cadastraForms">
+    <ion-item class="input-cadastro" id="nome">
+      <ion-input type="text" placeholder="Nome" formControlName="nome" [(ngModel)]="usuario.nome"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.nome">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('nome').hasError(error.type) && (cadastraForms.get('nome').dirty || cadastraForms.get('nome').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" id="nome">
+      <ion-input type="text" placeholder="Sobrenome" formControlName="sobrenome" [(ngModel)]="usuario.sobrenome"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.sobrenome">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('sobrenome').hasError(error.type) && (cadastraForms.get('sobrenome').dirty || cadastraForms.get('sobrenome').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" id="tel">
+      <ion-input type="tel" placeholder="Telefone" formControlName="telefone"  [(ngModel)]="usuario.telefone"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.telefone">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('telefone').hasError(error.type) && (cadastraForms.get('telefone').dirty || cadastraForms.get('telefone').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" >
+      <ion-select  multiple="false" placeholder="Gênero" formControlName="genero"  [(ngModel)]="usuario.genero">
+        <ion-select-option value="male">Masculino</ion-select-option>
+        <ion-select-option value="female">Feminino</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.genero">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('genero').hasError(error.type) && (cadastraForms.get('genero').dirty || cadastraForms.get('genero').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" id="cpf">
+      <ion-input type="tel" placeholder="CPF" formControlName="cpf" mask="000.000.000-00"  [(ngModel)]="usuario.cpf"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.cpf">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('cpf').hasError(error.type) && (cadastraForms.get('cpf').dirty || cadastraForms.get('cpf').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" id="email">
+      <ion-input type="email" placeholder="E-mail" formControlName="email"  [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.email">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('email').hasError(error.type) && (cadastraForms.get('email').dirty || cadastraForms.get('email').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="input-cadastro">
+      <ion-input type="text" placeholder="CEP" formControlName="cep" [(ngModel)]="usuario.cep"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.cep">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('cep').hasError(error.type) && (cadastraForms.get('cep').dirty || cadastraForms.get('cep').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="input-cadastro">
+      <ion-input type="text" placeholder="Logradouro" formControlName="logradouro" [(ngModel)]="usuario.logradouro"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.logradouro">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('logradouro').hasError(error.type) && (cadastraForms.get('logradouro').dirty || cadastraForms.get('logradouro').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="input-cadastro">
+      <ion-input type="tel" placeholder="Numero" formControlName="numero" [(ngModel)]="usuario.numero"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.numero">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('numero').hasError(error.type) && (cadastraForms.get('numero').dirty || cadastraForms.get('numero').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="input-cadastro">
+      <ion-input type="text" placeholder="Bairro" formControlName="bairro" [(ngModel)]="usuario.bairro"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.bairro">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('bairro').hasError(error.type) && (cadastraForms.get('bairro').dirty || cadastraForms.get('bairro').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="input-cadastro">
+      <ion-input type="text" placeholder="Cidade" formControlName="cidade" [(ngModel)]="usuario.cidade"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.cidade">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('cidade').hasError(error.type) && (cadastraForms.get('cidade').dirty || cadastraForms.get('cidade').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+    <ion-item class="input-cadastro">
+      <ion-input type="text" placeholder="UF" formControlName="uf" [(ngModel)]="usuario.uf"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.uf">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('uf').hasError(error.type) && (cadastraForms.get('uf').dirty || cadastraForms.get('uf').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" id="senha">
+      <ion-input type="password" placeholder="Senha" formControlName="senha"  [(ngModel)]="usuario.password"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.senha">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('senha').hasError(error.type) && (cadastraForms.get('senha').dirty || cadastraForms.get('senha').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" id="confirmarSenha" >
+      <ion-input type="password" placeholder="Confirmar Senha" formControlName="senha2"  [(ngModel)]="usuario.password2"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.senha2">
+        <div class="error-message"
+          *ngIf="cadastraForms.get('senha2').hasError(error.type) && (cadastraForms.get('senha2').dirty || cadastraForms.get('senha2').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+      <div class="error-nessages" *ngIf="usuario.password != usuario.password2">
+        As senhas devem ser iguais!
+      </div>
+    </div>
+
+    <ion-item class="input-button" lines="none">
+      <ion-input type="submit" value="Cadastrar" (click)="cadastra()" [disabled]="!cadastraForms.valid"></ion-input>
+    </ion-item>
+  </form>
+
+  <!-- <div class="termos">
+    <a href="https://relpredacao.com.br/politica-privacidade/">
+      Política de Privacidade
+    </a>
+  </div><br>
+  <div class="termos">
+    <a href="https://relpredacao.com.br/termos-de-uso/">
+      Termos de Uso
+    </a>
+  </div> -->
+  
+</ion-content>

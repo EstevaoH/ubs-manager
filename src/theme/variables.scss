@@ -76,7 +76,7 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -229,4 +229,97 @@
 
     --ion-card-background: #1e1e1e;
   }
+
+  
+}
+
+.app{
+  // --background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), #F4F4F4;
+  // --backdrop-filter: blur(4px);
+  --background: #0974d1;
+}
+
+// .logo-theme{
+//   //position: ;
+//   width: 90px;
+//   height: 28.08px;
+// }
+// .input-theme{
+//   --border-radius: 30px;
+//   --border-color: #1d70b7;
+//   --border-width: 2px; 
+  
+// }
+
+// .input-cadastro{
+//   --border-radius: 30px;
+//   //--border-color: #1d70b7;
+//   --border-width: 2px;
+//   --border: 1px solid #FF0000;
+// }
+
+// .input-button{
+//   --border-radius: 30px;
+//   // --border-width: 2px;
+//   --color: white;
+//   --background:linear-gradient(90deg, #1D70B7 26.92%, #61C4FC 89.42%), #FFB628;
+// };
+
+// .input-button2{
+//   --border-radius: 30px;
+//   // --border-width: 2px;
+//   --color: #1D70B7;
+//   --background: white;
+//   --border-radius: 30px;
+//   --border-color: #1d70b7;
+//   --border-width: 2px; 
+// }
+
+// .header-theme{
+//  // position: absolute;
+//   width: 100%;
+//   height: 82px;
+//   --background: linear-gradient(90deg, #1D70B7 26.92%, #61C4FC 89.42%), #FFB628;
+  
+// }
+.header-theme > ion-toolbar{
+  --background: #0974d1;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+
+.header-title{
+  height: 100%;
+  padding: 30px 0;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 22px;
+  color: white;
+  margin-left: 20px;
+  //margin-left: 55px;
+}
+// .header-logo{
+//   // position: absolute;
+//   // top: 25px;
+//   // right: 15px;
+//   display: block;
+//   margin: 0 auto;
+//   margin-top: 0px;
+// }
+
+// .header-logo-title{
+//   position: absolute;
+//   top: 25px;
+//   right: 15px;
+// }
+
+
+.error-messages{
+  font-size: 0.9em;
+  color: black;
+  text-align: center;
 }

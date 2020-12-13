@@ -1,0 +1,27 @@
+export class Usuario {
+    access_token: string;
+    nascimento: string;
+    cidade: string;
+    cep: string;
+    cpf: string;
+    bairro: string;
+    email: string;
+    genero: string;
+    id: string;
+    nome: string;
+    sobrenome: string;
+    telefone: string;
+    photo: string;
+    rg: string;
+    estado: string;
+    status: string;
+    logradouro: string;
+    password: string;
+    password2: string;
+
+    sintomas: [];
+    errors: string;
+    message: string;
+
+    
+}
