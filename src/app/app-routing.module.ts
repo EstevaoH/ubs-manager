@@ -17,7 +17,19 @@ const routes: Routes = [
 
           }
         ]
-      }
+      },
+      {
+        path: 'lista-consulta',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./pages/lista-consulta/lista-consulta.module').then( m => m.ListaConsultaPageModule)
+
+
+          }
+        ]
+      },
+
     ]
   },
 
@@ -43,6 +55,11 @@ const routes: Routes = [
     path: 'cadastro',
     loadChildren: () => import('./pages/cadastro/cadastro.module').then(m => m.CadastroPageModule)
   },
+  // {
+  //   path: 'lista-consulta',
+  //   loadChildren: () => import('./pages/lista-consulta/lista-consulta.module').then( m => m.ListaConsultaPageModule)
+  // },
+
 
 
 ];

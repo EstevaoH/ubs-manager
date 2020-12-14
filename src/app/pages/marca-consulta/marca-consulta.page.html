@@ -1,9 +1,298 @@
-<ion-header>
+<ion-header class="header-theme">
   <ion-toolbar>
-    <ion-title>marcaConsulta</ion-title>
+    <!-- <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="defaultHref" color="light"></ion-back-button>
+    </ion-buttons> -->
+    <ion-title class="header-title">Marcar Consulta</ion-title>
+    <!-- <img src="../../../assets/logo-relp-white 2.svg" width="120px"
+      class="header-logo-title"> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<p>asdf</p>
+<ion-content class="main">
+  <form [formGroup]="consultaForms">
+
+    <!-- <ion-label class="label-style">UBS</ion-label>
+    <ion-item class="input-cadastro" lines="none">
+      <ion-select interface="action-sheet" ok-text="Confirmar" cancel-text="Cancelar" class="input-select"
+        formControlName="ubs">
+        <ion-select-option>UBS1</ion-select-option>
+        <ion-select-option>UBS2</ion-select-option>
+        <ion-select-option>UBS3</ion-select-option>
+        <ion-select-option>UBS4</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.ubs">
+        <div class="error-message"
+          *ngIf="consultaForms.get('ubs').hasError(error.type) && (consultaForms.get('ubs').dirty || consultaForms.get('ubs').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div> -->
+
+
+    <ion-item class="input-cadastro">
+      <ion-select multiple="false" placeholder="UBS" formControlName="ubs" [(ngModel)]="consulta.ubs">
+        <ion-select-option value="UBS1">UBS1</ion-select-option>
+        <ion-select-option value="UBS2">UBS2</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.ubs">
+        <div class="error-message"
+          *ngIf="consultaForms.get('ubs').hasError(error.type) && (consultaForms.get('ubs').dirty || consultaForms.get('ubs').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" id="nome">
+      <ion-input type="text" placeholder="Nome" formControlName="nome" [(ngModel)]="consulta.nome"></ion-input>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.nome">
+        <div class="error-message"
+          *ngIf="consultaForms.get('nome').hasError(error.type) && (consultaForms.get('nome').dirty || consultaForms.get('nome').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+
+    <ion-item class="input-cadastro" lines="none">
+      <ion-label>Diabete</ion-label>
+    </ion-item>
+    <ion-radio-group class="input-style" formControlName="diabetes" [(ngModel)]="consulta.diabetes">
+      <ion-item class="input-cadastro" lines="none">
+        <div>Não</div>
+        <ion-radio slot="start" color="primary" value="2"></ion-radio>
+      </ion-item>
+      <ion-item class="input-cadastro" lines="full">
+        <div>Sim</div>
+        <ion-radio slot="start" color="primary" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.diabetes">
+        <div class="error-message"
+          *ngIf="consultaForms.get('diabetes').hasError(error.type) && (consultaForms.get('diabetes').dirty || consultaForms.get('diabetes').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" lines="none">
+      <ion-label>Hipertensão</ion-label>
+    </ion-item>
+    <ion-radio-group class="input-style" formControlName="hipertensao" [(ngModel)]="consulta.hipertensao">
+      <ion-item class="input-cadastro" lines="none">
+        <div>Não</div>
+        <ion-radio slot="start" color="primary" value="2"></ion-radio>
+      </ion-item>
+      <ion-item class="input-cadastro" lines="full">
+        <div>Sim</div>
+        <ion-radio slot="start" color="primary" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.hipertensao">
+        <div class="error-message"
+          *ngIf="consultaForms.get('hipertensao').hasError(error.type) && (consultaForms.get('hipertensao').dirty || consultaForms.get('hipertensao').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="input-cadastro" lines="none">
+      <ion-label>Doenças Cardiacas</ion-label>
+    </ion-item>
+    <ion-radio-group class="input-style" formControlName="cardiaco" [(ngModel)]="consulta.cardiaco">
+      <ion-item class="input-cadastro" lines="none">
+        <div>Não</div>
+        <ion-radio slot="start" color="primary" value="2"></ion-radio>
+      </ion-item>
+      <ion-item class="input-cadastro" lines="full">
+        <div>Sim</div>
+        <ion-radio slot="start" color="primary" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.cardiaco">
+        <div class="error-message"
+          *ngIf="consultaForms.get('cardiaco').hasError(error.type) && (consultaForms.get('cardiaco').dirty || consultaForms.get('cardiaco').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <div *ngIf="consulta.cardiaco == '1'">
+      <ion-item class="input-cadastro" id="sintomas" [disabled]="consulta.cardiaco == '2'">
+        <ion-textarea type="text" placeholder="Quais doenças cardiacas?" formControlName="doencasCardiacas" [(ngModel)]="consulta.doencasCardiacas">
+        </ion-textarea>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.doencasCardiacas">
+          <div class="error-message"
+            *ngIf="consultaForms.get('doencasCardiacas').hasError(error.type) && (consultaForms.get('doencasCardiacas').dirty || consultaForms.get('doencasCardiacas').touched)">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <ion-item class="input-cadastro" lines="none">
+      <ion-label>Alergias</ion-label>
+    </ion-item>
+    <ion-radio-group class="input-style" formControlName="alergias" [(ngModel)]="consulta.alergias">
+      <ion-item class="input-cadastro" lines="none">
+        <div>Não</div>
+        <ion-radio slot="start" color="primary" value="2"></ion-radio>
+      </ion-item>
+      <ion-item class="input-cadastro" lines="full">
+        <div>Sim</div>
+        <ion-radio slot="start" color="primary" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.alergias">
+        <div class="error-message"
+          *ngIf="consultaForms.get('alergias').hasError(error.type) && (consultaForms.get('alergias').dirty || consultaForms.get('alergias').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <div *ngIf="consulta.alergias == '1'">
+      <ion-item class="input-cadastro" id="sintomas" [disabled]="consulta.alergias == '2'">
+        <ion-textarea type="text" placeholder="Quais alergias?" formControlName="doencasAlergicas" [(ngModel)]="consulta.doencasAlergicas"></ion-textarea>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.doencasAlergicas">
+          <div class="error-message"
+            *ngIf="consultaForms.get('doencasAlergicas').hasError(error.type) && (consultaForms.get('doencasAlergicas').dirty || consultaForms.get('doencasAlergicas').touched)">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+
+    <ion-item class="input-cadastro" lines="none">
+      <ion-label>Sintomas</ion-label>
+    </ion-item>
+    <ion-item class="input-cadastro" id="sintomas">
+      <ion-textarea type="text" placeholder="Descreva seus sintomas" formControlName="sintomas"
+        [(ngModel)]="consulta.sintomas"></ion-textarea>
+    </ion-item>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.sintomas">
+        <div class="error-message"
+          *ngIf="consultaForms.get('sintomas').hasError(error.type) && (consultaForms.get('sintomas').dirty || consultaForms.get('sintomas').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- <div class="label-style">Diabete</div>
+    <ion-radio-group class="input-style" formControlName="tipoAula" [(ngModel)]="aula.tipoAula"
+      [(ngModel)]="tipoFilter.tipo">
+      <ion-item lines="none">
+        <div>Não</div>
+        <ion-radio slot="start" color="primary" value="2"></ion-radio>
+      </ion-item>
+      <ion-item lines="none">
+        <div>Sim</div>
+        <ion-radio slot="start" color="primary" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.tipoAula">
+        <div class="error-message"
+          *ngIf="consultaForms.get('tipoAula').hasError(error.type) && (consultaForms.get('tipoAula').dirty || consultaForms.get('tipoAula').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="label-style">hipertensão</div>
+    <ion-radio-group class="input-style" formControlName="tipoAula" [(ngModel)]="aula.tipoAula"
+      [(ngModel)]="tipoFilter.tipo">
+      <ion-item lines="none">
+        <div>Não</div>
+        <ion-radio slot="start" color="primary" value="2"></ion-radio>
+      </ion-item>
+      <ion-item lines="none">
+        <div>Sim</div>
+        <ion-radio slot="start" color="primary" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.tipoAula">
+        <div class="error-message"
+          *ngIf="consultaForms.get('tipoAula').hasError(error.type) && (consultaForms.get('tipoAula').dirty || consultaForms.get('tipoAula').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="label-style">Doenças Cardiacas</div>
+    <ion-radio-group class="input-style" formControlName="tipoAula" [(ngModel)]="aula.tipoAula"
+      [(ngModel)]="tipoFilter.tipo">
+      <ion-item lines="none">
+        <div>Não</div>
+        <ion-radio slot="start" color="primary" value="2"></ion-radio>
+      </ion-item>
+      <ion-item lines="none">
+        <div>Sim</div>
+        <ion-radio slot="start" color="primary" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <div class="error-messages">
+      <ng-container *ngFor="let error of error_messages.tipoAula">
+        <div class="error-message"
+          *ngIf="consultaForms.get('tipoAula').hasError(error.type) && (consultaForms.get('tipoAula').dirty || consultaForms.get('tipoAula').touched)">
+          {{error.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <div *ngIf="aula.tipoAula == '1'">
+      <ion-label class="label-style">Localização</ion-label>
+      <ion-item class="input-style" lines="none" [disabled]="aula.tipoAula == '2'">
+        <ion-select ok-text="Confirmar" cancel-text="Cancelar" class="input-select" formControlName="localizacao"
+          [(ngModel)]="aula.localizacao">
+          <ion-select-option *ngFor="let a of listarEndereco" value="{{a.id}}">{{a.titulo}} - {{a.logradouro}}
+          </ion-select-option>
+          <ion-item *ngIf="(listarEndereco| filterBy: userFilter).length === 0">
+            <ion-label>Não encotramos alunos cadastrados.</ion-label>
+          </ion-item>
+        </ion-select>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.localizacao">
+          <div class="error-message"
+            *ngIf="aulaForms.get('localizacao').hasError(error.type) && (aulaForms.get('localizacao').dirty || aulaForms.get('localizacao').touched) ">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+    </div> -->
+
+
+    <!-- <div *ngIf="aula.tipoAula == '1' || aula.tipoAula == '2'">
+      <div class="label-style">Quantidade de aulas</div>
+      <ion-radio-group class="input-theme" formControlName="aulas" allow-empty-selection="true"
+        [(ngModel)]="aula.precoAula">
+        <ion-item lines="none" *ngFor="let p of listarPreco | filterBy: tipoFilter">
+          <div>{{p.titulo}} (R${{p.preco}})</div>
+          <ion-radio slot="start" color="primary" value="{{p.id}}"></ion-radio>
+      </ion-radio-group>
+
+    </div> -->
+  </form>
+
+  <ion-button (click)="solicitarConsulta()" class="button-theme" [disabled]="!consultaForms.valid">
+    Solicitar
+  </ion-button>
 </ion-content>

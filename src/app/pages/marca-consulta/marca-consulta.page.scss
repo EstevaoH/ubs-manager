@@ -1,0 +1,48 @@
+ion-textarea{
+    height: 171px;
+};
+
+form{
+    margin-bottom: 50px;
+}
+
+.header-theme > ion-toolbar{
+    --background: #054175;
+    height: 100%;
+    width: 100%;
+    position: relative;
+};
+
+.button-theme{
+    --background: #36aa36;
+    display: block;
+    width: 50%;
+    height: 54px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+}
+
+.input-style{
+    width: 80%;
+    display: block;
+    margin-left: 10%;
+    background: #054175;
+
+  };
+
+  .input-cadastro{
+    --background: #054175;
+    color: white;
+};
+
+.radio-input{
+    --background: #054175;
+    color: white;
+    margin-left: 10%;
+}
+
+#sintomas{
+    height: 170px;
+
+}

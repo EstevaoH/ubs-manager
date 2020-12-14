@@ -1,0 +1,76 @@
+ion-card{
+    background: #0974d1;
+    width: 100%;
+    margin-left: 0px;
+};
+
+ion-item{
+    --background: #0974d1;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    margin-right: 50px;
+};
+
+.header-theme > ion-toolbar{
+    --background: #054175;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.header-title{
+    height: 100%;
+    padding: 30px 0;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 22px;
+    color: white;
+    margin-left: 20px;
+    //margin-left: 55px;
+}
+
+.aguardando{
+    color: #FFF;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: -10px;
+};
+
+.mensagem-error{
+    --background: #0974d1;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    margin-right: 50px;
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    top: 20px;
+};
+
+.card-content{
+    margin: 0 auto;
+}
+
+.disciplina{
+    text-align: center;
+    color: beige;
+    position: relative;
+    bottom: 3px;
+}
+
+#text-style{
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 25px;
+    color: #FFFFFF;
+    text-align: center;
+}

@@ -62,7 +62,7 @@ export class LoginPage implements OnInit {
   }
 
   login(){
-    this.router.navigate(['tabs/marca-consulta'])
+    this.router.navigate(['tabs/lista-consulta'])
   }
 
   recuperaSenha() {
