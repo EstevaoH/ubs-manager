@@ -23,8 +23,18 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('./pages/lista-consulta/lista-consulta.module').then( m => m.ListaConsultaPageModule)
+            loadChildren: () => import('./pages/lista-consulta/lista-consulta.module').then(m => m.ListaConsultaPageModule)
 
+
+          }
+        ]
+      },
+      {
+        path: 'suas-informacoes',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./pages/suas-informacoes/suas-informacoes.module').then(m => m.SuasInformacoesPageModule)
 
           }
         ]
@@ -54,7 +64,12 @@ const routes: Routes = [
   {
     path: 'cadastro',
     loadChildren: () => import('./pages/cadastro/cadastro.module').then(m => m.CadastroPageModule)
+  },  {
+    path: 'alterar-senha',
+    loadChildren: () => import('./pages/alterar-senha/alterar-senha.module').then( m => m.AlterarSenhaPageModule)
   },
+
+
   // {
   //   path: 'lista-consulta',
   //   loadChildren: () => import('./pages/lista-consulta/lista-consulta.module').then( m => m.ListaConsultaPageModule)

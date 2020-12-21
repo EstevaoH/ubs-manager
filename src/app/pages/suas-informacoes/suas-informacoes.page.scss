@@ -1,0 +1,95 @@
+// form{
+//     position: relative;
+//     bottom: 45px;
+// };
+
+ion-textarea{
+    height: 171px;
+};
+// ion-title#titulo{
+//     font-family: Arial;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 25px;
+//     line-height: 22px;
+// /* identical to box height */
+//     text-align: center;
+
+//     color: #FFFFFF;
+// }
+
+ion-item{
+    width: 80%;
+    height: 52px;
+    margin: 10px 0;
+};
+
+// ion-item:first-child{
+//     margin-top: 80px;
+// };
+
+.header-theme > ion-toolbar{
+    --background: #054175;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+.header-md::after{
+    width: 0%;
+  }
+
+.input-cadastro{
+    height: 52px;
+    left: 10%;
+    width: 80%;
+    margin: 14px, auto;
+    --background: #054175;
+    color: white;
+};
+
+.input-button{
+    height: 52px;
+    left: 10%;
+    width: 80%;
+    margin: 14px, auto;
+    text-align: center;
+    --background: #36aa36;
+    color: white;
+    font-weight: 600
+};
+
+.button-theme{
+    --background: #36aa36;
+    display: block;
+    width: 50%;
+    height: 54px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -30px;
+}
+
+.item-highlight{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    --background: var(--highlight-background);
+};
+
+.alteraSenha{
+    text-align: center;
+    position: relative;
+    top: 40px;
+};
+
+.radio-input{
+    --background: #054175;
+    color: white;
+    margin-left: 10%;
+}
+
+#sintomas{
+    height: 170px;
+
+}

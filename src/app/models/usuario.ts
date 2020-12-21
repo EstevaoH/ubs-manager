@@ -18,8 +18,12 @@ export class Usuario {
     logradouro: string;
     password: string;
     password2: string;
+    infoMedicas:{
+        alergias: string;
+        cardiaco: string;
 
-    sintomas: [];
+    }
+    sintomas: string;
     errors: string;
     message: string;
 
