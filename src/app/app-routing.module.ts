@@ -39,6 +39,38 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'informacao-consulta',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./pages/informacao-consulta/informacao-consulta.module').then( m => m.InformacaoConsultaPageModule)
+
+          }
+        ]
+      },
+
+      {
+        path: 'alterar-senha',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./pages/alterar-senha/alterar-senha.module').then( m => m.AlterarSenhaPageModule)
+ 
+          }
+        ]
+      },
+
+      {
+        path: 'consulta-concluida',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./pages/consulta-concluida/consulta-concluida.module').then( m => m.ConsultaConcluidaPageModule)
+
+          }
+        ]
+      },
 
     ]
   },
@@ -64,11 +96,15 @@ const routes: Routes = [
   {
     path: 'cadastro',
     loadChildren: () => import('./pages/cadastro/cadastro.module').then(m => m.CadastroPageModule)
-  },  {
-    path: 'alterar-senha',
-    loadChildren: () => import('./pages/alterar-senha/alterar-senha.module').then( m => m.AlterarSenhaPageModule)
   },
-
+  {
+    path: 'recuperar-senha',
+    loadChildren: () => import('./pages/recuperar-senha/recuperar-senha.module').then( m => m.RecuperarSenhaPageModule)
+  },
+  {
+    path: 'informacao-consulta',
+    loadChildren: () => import('./pages/informacao-consulta/informacao-consulta.module').then( m => m.InformacaoConsultaPageModule)
+  },
 
   // {
   //   path: 'lista-consulta',

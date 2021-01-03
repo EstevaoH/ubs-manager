@@ -19,7 +19,11 @@ ion-item{
     height: 100%;
     width: 100%;
     position: relative;
-}
+};
+
+.header-md::after{
+    width: 0%;
+};
 
 .header-title{
     height: 100%;
@@ -32,7 +36,7 @@ ion-item{
     color: white;
     margin-left: 20px;
     //margin-left: 55px;
-}
+};
 
 .aguardando{
     color: #FFF;
@@ -58,14 +62,14 @@ ion-item{
 
 .card-content{
     margin: 0 auto;
-}
+};
 
 .disciplina{
     text-align: center;
     color: beige;
     position: relative;
     bottom: 3px;
-}
+};
 
 #text-style{
     font-weight: 300;
@@ -73,4 +77,4 @@ ion-item{
     line-height: 25px;
     color: #FFFFFF;
     text-align: center;
-}
+};

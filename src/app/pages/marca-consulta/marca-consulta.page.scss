@@ -13,6 +13,10 @@ form{
     position: relative;
 };
 
+.header-md::after{
+    width: 0%;
+  }
+
 .button-theme{
     --background: #36aa36;
     display: block;

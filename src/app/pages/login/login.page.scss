@@ -13,15 +13,15 @@
       color: white;
     --background: #0974d1;
     }
-    .input-button{
-      height: 52px;
-      margin: 14px auto;
-      width: 80%;
-      text-align: center;
-    --background: #0974d1;
-    color: whitesmoke;
-    font-weight: 600
-    };
+    .button-theme{
+      --background: #36aa36;
+      display: block;
+      width: 50%;
+      height: 54px;
+      margin: 0 auto;
+      position: relative;
+      // bottom: 20px;
+  }
     
     a#cadastrar{
       /* Cadastre-se */
@@ -35,6 +35,8 @@
     align-items: center;
     text-align: center;
     
+    position: relative;
+    bottom: -10px;
     color: white;
     }
     
@@ -49,6 +51,9 @@
       display: block;
       align-items: center;
       text-align: center;
+
+      position: relative;
+      bottom: -10px;
     
       color: white;
     }

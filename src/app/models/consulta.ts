@@ -8,4 +8,5 @@ export class Consulta{
     alergias: string;
     doencasAlergicas:string
     sintomas: string;
+    sus: any;
 }

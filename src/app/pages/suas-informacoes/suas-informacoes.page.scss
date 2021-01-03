@@ -69,6 +69,21 @@ ion-item{
     bottom: -30px;
 }
 
+.foto-perfil{
+    display: block;
+    margin: 0px auto;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    top: 10px;
+};
+
+.info{
+    --color-checked: #36aa36;
+    color: white;
+    --color-hover: #36aa36;
+}
+
 .item-highlight{
     left: 0;
     right: 0;

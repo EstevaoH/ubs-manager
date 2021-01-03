@@ -1,0 +1,62 @@
+// form{
+//     position: relative;
+//     bottom: 45px;
+// };
+
+
+ion-textarea{
+    height: 171px;
+};
+// ion-title#titulo{
+//     font-family: Arial;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 25px;
+//     line-height: 22px;
+// /* identical to box height */
+//     text-align: center;
+
+//     color: #FFFFFF;
+// }
+
+ion-item{
+    width: 80%;
+    margin: 0px auto;
+    --background: #054175;
+    color: whitesmoke
+};
+
+// ion-item:first-child{
+//     margin-top: 80px;
+// };
+
+.header-theme > ion-toolbar{
+    --background: #054175;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+.header-md::after{
+    width: 0%;
+  }
+
+
+.foto-perfil{
+    display: block;
+    margin: 0px auto;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    top: 45px;
+};
+
+#div-style{
+    position: relative;
+top: -40px;
+}
+
+#sintomas{
+    height: 170px;
+
+}

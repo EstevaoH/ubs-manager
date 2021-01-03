@@ -17,6 +17,9 @@ export class MarcaConsultaPage implements OnInit {
     'nome': [
       { type: 'required', message: 'O nome do paciente(a) é necessário.' },
     ],
+    'sus': [
+      { type: 'required', message: 'O Nº do SUS é necessário.' },
+    ],
     'ubs': [
       { type: 'required', message: 'Selecione a localização da UBS.' },
     ],
@@ -52,6 +55,9 @@ export class MarcaConsultaPage implements OnInit {
 
     this.consultaForms = this.formBuilder.group({
       nome: new FormControl('', Validators.compose([
+        Validators.required,
+      ])),
+      sus: new FormControl('', Validators.compose([
         Validators.required,
       ])),
       ubs: new FormControl('', Validators.compose([

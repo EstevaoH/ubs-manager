@@ -31,9 +31,13 @@
       </ng-container>
     </div>
 
-    <ion-item class="input-button" lines="none">
+    <!-- <ion-item class="input-button" lines="none">
       <ion-input type="submit" value="ENTRAR" (click)="login()" [disabled]="!loginForm.valid"></ion-input>
-    </ion-item>
+    </ion-item> -->
+
+    <ion-button (click)="login()" class="button-theme" [disabled]="!loginForm.valid">
+      ENTRAR
+    </ion-button>
 
   </form>
   <div class="ion-text-center">

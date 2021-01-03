@@ -1,6 +1,7 @@
 export class Usuario {
     access_token: string;
     nascimento: string;
+    sus: any;
     cidade: string;
     cep: string;
     cpf: string;

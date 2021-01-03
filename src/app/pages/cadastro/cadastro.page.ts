@@ -15,6 +15,9 @@ export class CadastroPage implements OnInit {
   usuario: Usuario;
 
   error_messages = {
+    'sus': [
+      { type: 'required', message: 'O Nº do SUS é necessário.' },
+    ],
     'nome': [
       { type: 'required', message: 'O Nome é necessário.' },
       { type: 'minlength', message: 'O nome tem que ter no mínimo 6 caracteres.' }
@@ -87,6 +90,9 @@ export class CadastroPage implements OnInit {
       sobrenome: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(6),
+      ])),
+      sus: new FormControl('', Validators.compose([
+        Validators.required,
       ])),
       telefone: new FormControl('', Validators.compose([
         Validators.required,

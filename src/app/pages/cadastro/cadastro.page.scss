@@ -59,3 +59,13 @@ ion-item:first-child{
 .termos{
     text-align: center;
 };
+
+.button-theme{
+    --background: #36aa36;
+    display: block;
+    width: 50%;
+    height: 54px;
+    margin: 0 auto;
+    position: relative;
+    // bottom: 20px;
+}

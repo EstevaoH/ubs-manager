@@ -17,7 +17,9 @@ export class SuasInformacoesPage implements OnInit {
   error_messages = {
     'nome': [
       { type: 'required', message: 'O Nome é necessário.' },
-      { type: 'minlength', message: 'O nome tem que ter no mínimo 6 caracteres.' }
+    ],
+    'sus': [
+      { type: 'required', message: 'O Nº do SUS é necessário.' },
     ],
     'sobrenome': [
       { type: 'required', message: 'O sobrenome é necessário.' },
@@ -103,6 +105,9 @@ export class SuasInformacoesPage implements OnInit {
       nome: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(6),
+      ])),
+      sus: new FormControl('', Validators.compose([
+        Validators.required,
       ])),
       sobrenome: new FormControl('', Validators.compose([
         Validators.required,
