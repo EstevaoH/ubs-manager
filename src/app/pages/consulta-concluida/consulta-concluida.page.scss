@@ -1,0 +1,41 @@
+ion-textarea{
+    height: 171px;
+};
+
+ion-item{
+    width: 80%;
+    margin: 0px auto;
+    --background: #054175;
+    color: whitesmoke
+};
+
+.header-theme > ion-toolbar{
+    --background: #054175;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+.header-md::after{
+    width: 0%;
+  }
+
+
+.foto-perfil{
+    display: block;
+    margin: 0px auto;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    top: 45px;
+};
+
+#div-style{
+    position: relative;
+top: -40px;
+}
+
+#sintomas{
+    height: 170px;
+
+}

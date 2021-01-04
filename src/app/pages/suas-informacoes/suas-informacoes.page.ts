@@ -189,4 +189,8 @@ export class SuasInformacoesPage implements OnInit {
   ngOnInit() {
   }
 
+  sair(){
+    this.router.navigate(['login'])
+  }
+
 }

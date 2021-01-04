@@ -67,7 +67,14 @@ ion-item{
     margin: 0 auto;
     position: relative;
     bottom: -30px;
-}
+};
+
+.sair{
+    position: absolute;
+    top: 31px;
+    right: 15px;
+    color: white;
+};
 
 .foto-perfil{
     display: block;

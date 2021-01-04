@@ -19,4 +19,8 @@ export class ListaConsultaPage implements OnInit {
     this.router.navigate(['tabs/informacao-consulta'])
   }
 
+  consultaConcluida(){
+    this.router.navigate(['tabs/consulta-concluida'])
+  }
+
 }

@@ -30,6 +30,25 @@
           </ion-card-header>
         </ion-card>
       </ion-col>
+
+      <ion-col size-lg="6" size-md="6" size-sm="6" size="12">
+        <ion-card (click)="consultaConcluida()">
+          <ion-card-header>
+            <ion-item lines="none">
+              <ion-avatar slot="start">
+                <ion-icon size="large" name="heart" style="color: rgb(17, 0, 255);"></ion-icon>
+              </ion-avatar>
+              
+              <div class="card-content" style="font-size: 15px;" >Rosa Fernandes da Silva, 205a - Nova Esperança, Parnamirim</div>
+            </ion-item>
+            <div class="disciplina" >Estevao</div>
+            <!-- <div id="text-style">{{c.dia}} às {{c.hora}}</div> -->
+            <div class="aguardando" >Consulta Concluída</div>
+            <!-- <div class="aguardando" *ngIf="c.professor">{{c.professor}}</div> -->
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+
       <ion-col size-lg="6" size-md="6" size-sm="6" size="12">
         <ion-card>
           <ion-card-header>
@@ -42,7 +61,8 @@
             </ion-item>
             <div class="disciplina" >Estevao</div>
             <!-- <div id="text-style">{{c.dia}} às {{c.hora}}</div> -->
-            <div class="aguardando" >Esperando atendimento</div>
+            <!-- <div class="aguardando" >Esperando atendimento</div> -->
+            <div class="aguardando" >Tempo estimado 35 minutos</div>
             <!-- <div class="aguardando" *ngIf="c.professor">{{c.professor}}</div> -->
           </ion-card-header>
         </ion-card>
